@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024">
+  <defs>
+    <linearGradient id="house" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#29b6f6"/>
+      <stop offset="1" stop-color="#0277bd"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb74d"/>
+      <stop offset="1" stop-color="#f57c00"/>
+    </linearGradient>
+    <!-- Transparent gap around the badge, so it reads on light and dark backgrounds -->
+    <mask id="gap">
+      <rect width="512" height="512" fill="white"/>
+      <circle cx="404" cy="404" r="116" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#gap)">
+    <path d="M256 40 L472 236 L428 236 L428 452 Q428 484 396 484 L116 484 Q84 484 84 452 L84 236 L40 236 Z"
+          fill="url(#house)" stroke="url(#house)" stroke-width="28" stroke-linejoin="round"/>
+    <path transform="translate(118 196) scale(10.5)" fill="#ffffff"
+          d="M22.7,19L13.6,9.9C14.5,7.6 14,4.9 12.1,3C10.1,1 7.1,0.6 4.7,1.7L9,6L6,9L1.6,4.7C0.4,7.1 0.9,10.1 2.9,12.1C4.8,14 7.5,14.5 9.8,13.6L18.9,22.7C19.3,23.1 19.9,23.1 20.3,22.7L22.6,20.4C23.1,20 23.1,19.3 22.7,19Z"/>
+  </g>
+  <circle cx="404" cy="404" r="96" fill="url(#badge)"/>
+  <path transform="translate(340 342) scale(5.4)" fill="#ffffff"
+        d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
+</svg>

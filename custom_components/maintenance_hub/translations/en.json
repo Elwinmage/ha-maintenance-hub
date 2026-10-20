@@ -1,0 +1,124 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "New location",
+        "description": "A location groups devices and their maintenance tasks: main house, holiday home, pool…",
+        "data": { "name": "Location name" }
+      }
+    },
+    "error": { "empty_name": "The name cannot be empty." },
+    "abort": { "already_configured": "This location already exists." }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Devices of the location",
+        "menu_options": {
+          "add": "Add a device",
+          "edit": "Edit a device",
+          "remove": "Remove a device"
+        }
+      },
+      "add": {
+        "title": "Add a device",
+        "description": "Pick an existing Home Assistant device, or type a name for a device Home Assistant does not know. A template preselects the usual tasks.",
+        "data": {
+          "ha_device_id": "Home Assistant device",
+          "name": "Name",
+          "template": "Template"
+        }
+      },
+      "tasks": {
+        "title": "Tasks of {device}",
+        "description": "Tick catalog tasks and/or type your own, one per field: `Label` (every month) or `Label ; 2 ; weeks`. Frequencies are then adjusted from the card.",
+        "data": {
+          "tasks": "Catalog tasks",
+          "custom_tasks": "Custom tasks"
+        }
+      },
+      "edit": {
+        "title": "Edit a device",
+        "data": { "device": "Device" }
+      },
+      "edit_device": {
+        "title": "Edit a device",
+        "data": { "name": "Name" }
+      },
+      "remove": {
+        "title": "Remove a device",
+        "description": "The device's tasks and their history are deleted.",
+        "data": { "device": "Device" }
+      }
+    },
+    "error": {
+      "device_or_name": "Pick a device or type a name.",
+      "empty_name": "The name cannot be empty.",
+      "invalid_custom_task": "Invalid custom task. Use `Label` or `Label ; value ; unit` (days, weeks, months, years).",
+      "no_task": "Select or type at least one task."
+    }
+  },
+  "exceptions": {
+    "not_a_task": { "message": "{entity_id} is not a Maintenance Hub task." },
+    "invalid_frequency": { "message": "Invalid frequency: {error}" }
+  },
+  "selector": {
+    "unit": {
+      "options": {
+        "days": "Days",
+        "weeks": "Weeks",
+        "months": "Months",
+        "years": "Years"
+      }
+    }
+  },
+  "services": {
+    "reset": {
+      "name": "Record maintenance",
+      "description": "Marks maintenance tasks as done. Handy from an NFC tag stuck next to the equipment.",
+      "fields": {
+        "entity_id": {
+          "name": "Tasks",
+          "description": "Maintenance task sensors."
+        },
+        "last_reset": {
+          "name": "Date and time",
+          "description": "When the maintenance was actually done. Defaults to now."
+        }
+      }
+    },
+    "set_frequency": {
+      "name": "Set frequency",
+      "description": "Changes how often maintenance tasks come back.",
+      "fields": {
+        "entity_id": {
+          "name": "Tasks",
+          "description": "Maintenance task sensors."
+        },
+        "unit": { "name": "Unit", "description": "Unit of the frequency." },
+        "value": {
+          "name": "Value",
+          "description": "Number of units between two maintenances."
+        },
+        "anchor": {
+          "name": "Seasonal date",
+          "description": "MM-DD date the task comes back on each season (years unit only). Empty for a rolling task."
+        }
+      }
+    },
+    "set_notify": {
+      "name": "Set alerts",
+      "description": "Enables or mutes the alerts of maintenance tasks.",
+      "fields": {
+        "entity_id": {
+          "name": "Tasks",
+          "description": "Maintenance task sensors."
+        },
+        "notify": {
+          "name": "Alerts",
+          "description": "On to be alerted when the task is due."
+        }
+      }
+    }
+  }
+}

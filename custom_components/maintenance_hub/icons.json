@@ -1,0 +1,7 @@
+{
+  "services": {
+    "reset": { "service": "mdi:check-circle-outline" },
+    "set_frequency": { "service": "mdi:calendar-edit" },
+    "set_notify": { "service": "mdi:bell-cog-outline" }
+  }
+}

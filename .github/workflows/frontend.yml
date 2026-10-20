@@ -1,0 +1,30 @@
+name: Frontend
+
+on:
+  push:
+    paths: ["frontend/**", "custom_components/maintenance_hub/frontend/**"]
+  pull_request:
+    paths: ["frontend/**", "custom_components/maintenance_hub/frontend/**"]
+  workflow_dispatch:
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Install
+        run: npm install --no-audit --no-fund
+      - name: Tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      # The bundle served by the integration is committed: fail when it was
+      # not rebuilt after a change of the card or of ha-maintenance-ui.
+      - name: Bundle up to date
+        run: git diff --exit-code -- ../custom_components/maintenance_hub/frontend

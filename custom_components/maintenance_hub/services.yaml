@@ -1,0 +1,60 @@
+reset:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: maintenance_hub
+          domain: sensor
+          multiple: true
+    last_reset:
+      required: false
+      example: "2026-10-19 18:30:00"
+      selector:
+        datetime:
+
+set_frequency:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: maintenance_hub
+          domain: sensor
+          multiple: true
+    unit:
+      required: true
+      selector:
+        select:
+          translation_key: unit
+          options:
+            - days
+            - weeks
+            - months
+            - years
+    value:
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 999
+          mode: box
+    anchor:
+      required: false
+      example: "10-15"
+      selector:
+        text:
+
+set_notify:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: maintenance_hub
+          domain: sensor
+          multiple: true
+    notify:
+      required: true
+      selector:
+        boolean:

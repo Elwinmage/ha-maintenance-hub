@@ -1,0 +1,46 @@
+name: Update Stats
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Fetch and Calculate
+        run: |
+          set -euo pipefail
+
+          # A failed fetch must not overwrite a good figure with a bad one:
+          # fall back to an empty object and let the floor below take over.
+          DATA=$(curl -sf https://analytics.home-assistant.io/custom_integrations.json || echo '{}')
+
+          # `// 0` covers both cases where the key is absent: an integration
+          # too young to appear in the file at all, and one present with a
+          # null total. Without it jq prints "null" and the arithmetic below
+          # silently yields 0.
+          REAL_COUNT=$(echo "$DATA" | jq -r '.maintenance_hub.total // 0')
+          ESTIMATED_COUNT=$((REAL_COUNT * 4))
+
+          # Analytics only counts instances that opted in, so the reported
+          # number is a floor, not a census. Below MIN_COUNT the figure says
+          # more about analytics participation than about usage, so show
+          # MIN_COUNT instead of a discouraging 0.
+          MIN_COUNT=10
+          if [ "$ESTIMATED_COUNT" -lt "$MIN_COUNT" ]; then
+            ESTIMATED_COUNT=$MIN_COUNT
+          fi
+
+          echo "{\"estimated\": $ESTIMATED_COUNT}" > ./badges/stats.json
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -f ./badges/stats.json
+          git commit -m "Update estimated stats" || exit 0
+          git push

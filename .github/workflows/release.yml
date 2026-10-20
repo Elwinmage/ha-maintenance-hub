@@ -1,0 +1,82 @@
+name: Release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag Version"
+        required: true
+        default: "v"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: "Set version number from trigger's tag"
+        run: |
+          TAG="${{ github.event.inputs.tag }}"
+          # Integration: same "vX.Y.Z" format as the other components.
+          yq -i -o json ".version=\"${TAG}\"" \
+            "${{ github.workspace }}/custom_components/maintenance_hub/manifest.json"
+          # Card: bare semver for npm, "vX.Y.Z" in the console banner.
+          yq -i -o json ".version=\"${TAG#v}\"" \
+            "${{ github.workspace }}/frontend/package.json"
+          sed -i "s/^export const VERSION = .*/export const VERSION = \"${TAG}\";/" \
+            "${{ github.workspace }}/frontend/src/const.ts"
+
+      # The bundle served by the integration is rebuilt with the new version,
+      # so the released zip and the tagged tree always carry a fresh card.
+      - name: Test and build the card
+        working-directory: frontend
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run build
+
+      - name: Commit version and bundle
+        id: update_manifest
+        run: |
+          git config --global user.email "moranderic31@gmail.com"
+          git config --global user.name "Elwinmage"
+          git add custom_components/maintenance_hub frontend/package.json frontend/src/const.ts
+          git commit -m "Update version" || echo "Nothing to commit"
+          git push origin HEAD:main
+          SHA=`git rev-parse HEAD`
+          echo "tag_sha=${SHA}" >> $GITHUB_OUTPUT
+
+      - name: Create tag
+        if: steps.update_manifest.outcome == 'success'
+        uses: actions/github-script@v9
+        id: create_tag
+        with:
+          script: |
+            github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/${{ github.event.inputs.tag}}',
+              sha: '${{steps.update_manifest.outputs.tag_sha}}'
+            })
+
+      # 📦 Zip with the custom_components/ tree, card bundle included
+      - name: Pack integration ZIP
+        run: |
+          zip -r maintenance_hub.zip custom_components/maintenance_hub
+          unzip -l maintenance_hub.zip
+
+      - name: Create Release with Zip Asset
+        uses: ncipollo/release-action@v1
+        with:
+          prerelease: true # Passe à false si tu veux des versions stables
+          tag: ${{ github.event.inputs.tag }}
+          artifacts: "maintenance_hub.zip"
+          allowUpdates: true
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,1035 @@
+{
+  "version": 1,
+  "tasks": {
+    "pool_prefilter_clean": {
+      "name": {
+        "en": "Clean pump pre-filter basket",
+        "fr": "Nettoyer le panier du pré-filtre de la pompe"
+      },
+      "icon": "mdi:filter-variant",
+      "unit": "weeks",
+      "value": 1
+    },
+    "pool_skimmer_baskets": {
+      "name": {
+        "en": "Empty skimmer baskets",
+        "fr": "Vider les paniers de skimmer"
+      },
+      "icon": "mdi:basket-outline",
+      "unit": "weeks",
+      "value": 1
+    },
+    "pool_backwash": {
+      "name": {
+        "en": "Backwash sand or glass filter",
+        "fr": "Contre-lavage du filtre à sable ou à verre"
+      },
+      "icon": "mdi:backup-restore",
+      "unit": "weeks",
+      "value": 2
+    },
+    "pool_cartridge_clean": {
+      "name": {
+        "en": "Clean filter cartridge",
+        "fr": "Nettoyer la cartouche du filtre"
+      },
+      "icon": "mdi:filter",
+      "unit": "weeks",
+      "value": 2
+    },
+    "pool_sand_replace": {
+      "name": {
+        "en": "Replace filter sand",
+        "fr": "Remplacer le sable du filtre"
+      },
+      "icon": "mdi:grain",
+      "unit": "years",
+      "value": 5
+    },
+    "pool_glass_replace": {
+      "name": {
+        "en": "Replace filter glass media",
+        "fr": "Remplacer le verre filtrant"
+      },
+      "icon": "mdi:grain",
+      "unit": "years",
+      "value": 10
+    },
+    "pool_prefilter_seal_check": {
+      "name": {
+        "en": "Check pre-filter lid and seal",
+        "fr": "Vérifier le joint et le couvercle du pré-filtre"
+      },
+      "icon": "mdi:circle-outline",
+      "unit": "months",
+      "value": 6
+    },
+    "pool_waterline_clean": {
+      "name": {
+        "en": "Clean the waterline",
+        "fr": "Nettoyer la ligne d'eau"
+      },
+      "icon": "mdi:waves",
+      "unit": "weeks",
+      "value": 2
+    },
+    "pool_cover_clean": {
+      "name": {
+        "en": "Clean pool cover",
+        "fr": "Nettoyer le volet ou la bâche"
+      },
+      "icon": "mdi:window-shutter",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "pool_winterize": {
+      "name": {
+        "en": "Winterize the pool",
+        "fr": "Hivernage de la piscine"
+      },
+      "icon": "mdi:snowflake",
+      "unit": "years",
+      "value": 1,
+      "anchor": "10-15"
+    },
+    "pool_reopen": {
+      "name": {
+        "en": "Reopen the pool",
+        "fr": "Remise en service de la piscine"
+      },
+      "icon": "mdi:weather-sunny",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-15"
+    },
+    "pool_water_analysis": {
+      "name": {
+        "en": "Full water analysis (TA, TH, stabilizer)",
+        "fr": "Analyse complète de l'eau (TAC, TH, stabilisant)"
+      },
+      "icon": "mdi:test-tube",
+      "unit": "months",
+      "value": 1
+    },
+    "pool_ph_calibrate": {
+      "name": {
+        "en": "Calibrate pH probe",
+        "fr": "Étalonner la sonde pH"
+      },
+      "icon": "mdi:tune-variant",
+      "unit": "months",
+      "value": 3
+    },
+    "pool_orp_calibrate": {
+      "name": {
+        "en": "Calibrate ORP probe",
+        "fr": "Étalonner la sonde Redox (ORP)"
+      },
+      "icon": "mdi:tune-variant",
+      "unit": "months",
+      "value": 3
+    },
+    "pool_ec_calibrate": {
+      "name": {
+        "en": "Calibrate EC probe",
+        "fr": "Étalonner la sonde EC (conductivité)"
+      },
+      "icon": "mdi:tune-variant",
+      "unit": "months",
+      "value": 3
+    },
+    "pool_ph_clean": {
+      "name": {
+        "en": "Clean pH probe",
+        "fr": "Nettoyer la sonde pH"
+      },
+      "icon": "mdi:test-tube-empty",
+      "unit": "months",
+      "value": 1
+    },
+    "pool_orp_clean": {
+      "name": {
+        "en": "Clean ORP probe",
+        "fr": "Nettoyer la sonde Redox (ORP)"
+      },
+      "icon": "mdi:test-tube-empty",
+      "unit": "months",
+      "value": 1
+    },
+    "pool_ec_clean": {
+      "name": {
+        "en": "Clean EC probe",
+        "fr": "Nettoyer la sonde EC (conductivité)"
+      },
+      "icon": "mdi:test-tube-empty",
+      "unit": "months",
+      "value": 1
+    },
+    "pool_salt_cell_descale": {
+      "name": {
+        "en": "Descale salt chlorinator cell",
+        "fr": "Détartrer la cellule de l'électrolyseur"
+      },
+      "icon": "mdi:spray-bottle",
+      "unit": "months",
+      "value": 3
+    },
+    "pool_salt_cell_replace": {
+      "name": {
+        "en": "Replace salt chlorinator cell",
+        "fr": "Remplacer la cellule de l'électrolyseur"
+      },
+      "icon": "mdi:battery-sync",
+      "unit": "years",
+      "value": 5
+    },
+    "pool_dosing_strainer_replace": {
+      "name": {
+        "en": "Replace dosing pump strainer",
+        "fr": "Remplacer la crépine de la pompe doseuse"
+      },
+      "icon": "mdi:filter-outline",
+      "unit": "years",
+      "value": 1
+    },
+    "pool_dosing_tube_replace": {
+      "name": {
+        "en": "Replace peristaltic tube",
+        "fr": "Remplacer le tube péristaltique"
+      },
+      "icon": "mdi:pipe",
+      "unit": "years",
+      "value": 1
+    },
+    "pool_robot_filter_clean": {
+      "name": {
+        "en": "Robot: clean the filter",
+        "fr": "Robot : nettoyer le filtre"
+      },
+      "icon": "mdi:robot-vacuum",
+      "unit": "weeks",
+      "value": 1
+    },
+    "pool_robot_brushes_check": {
+      "name": {
+        "en": "Robot: check brushes and tracks",
+        "fr": "Robot : vérifier les brosses et les chenilles"
+      },
+      "icon": "mdi:brush",
+      "unit": "months",
+      "value": 6
+    },
+    "pool_hp_evaporator_clean": {
+      "name": {
+        "en": "Clean evaporator fins",
+        "fr": "Nettoyer l'évaporateur (ailettes, feuilles)"
+      },
+      "icon": "mdi:fan",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "pool_hp_condensate_check": {
+      "name": {
+        "en": "Check condensate drain",
+        "fr": "Vérifier l'écoulement des condensats"
+      },
+      "icon": "mdi:water-outline",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "pool_hp_flow_check": {
+      "name": {
+        "en": "Check flow rate and bypass setting",
+        "fr": "Contrôler le débit et le réglage du by-pass"
+      },
+      "icon": "mdi:valve",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "pool_hp_fittings_check": {
+      "name": {
+        "en": "Check fittings, leaks and flow switch",
+        "fr": "Vérifier les raccords, les fuites et le contacteur de débit"
+      },
+      "icon": "mdi:pipe-leak",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "pool_hp_drain": {
+      "name": {
+        "en": "Drain the heat exchanger before winter",
+        "fr": "Vidanger l'échangeur avant l'hiver"
+      },
+      "icon": "mdi:water-off",
+      "unit": "years",
+      "value": 1,
+      "anchor": "10-15"
+    },
+    "pool_hp_cover": {
+      "name": {
+        "en": "Fit the winter cover",
+        "fr": "Mettre la housse d'hivernage"
+      },
+      "icon": "mdi:umbrella-outline",
+      "unit": "years",
+      "value": 1,
+      "anchor": "10-15"
+    },
+    "pool_hp_pro_check": {
+      "name": {
+        "en": "Professional check (refrigerant, electrical)",
+        "fr": "Contrôle par un professionnel (fluide, électrique)"
+      },
+      "icon": "mdi:account-hard-hat",
+      "unit": "years",
+      "value": 2
+    },
+    "ac_filters_clean": {
+      "name": {
+        "en": "Clean indoor unit filters",
+        "fr": "Nettoyer les filtres des unités intérieures"
+      },
+      "icon": "mdi:air-filter",
+      "unit": "months",
+      "value": 1
+    },
+    "ac_exchanger_clean": {
+      "name": {
+        "en": "Clean and disinfect indoor coils",
+        "fr": "Nettoyer et désinfecter les échangeurs intérieurs"
+      },
+      "icon": "mdi:spray",
+      "unit": "years",
+      "value": 1,
+      "anchor": "05-01"
+    },
+    "ac_outdoor_clean": {
+      "name": {
+        "en": "Clean the outdoor unit",
+        "fr": "Nettoyer l'unité extérieure"
+      },
+      "icon": "mdi:hvac",
+      "unit": "months",
+      "value": 6
+    },
+    "ac_condensate_check": {
+      "name": {
+        "en": "Check condensate drain",
+        "fr": "Vérifier l'écoulement des condensats"
+      },
+      "icon": "mdi:water-outline",
+      "unit": "months",
+      "value": 6
+    },
+    "ac_remote_batteries": {
+      "name": {
+        "en": "Replace remote control batteries",
+        "fr": "Remplacer les piles des télécommandes"
+      },
+      "icon": "mdi:battery",
+      "unit": "years",
+      "value": 2
+    },
+    "hvac_pro_service": {
+      "name": {
+        "en": "Professional service (heat pump / AC 4–70 kW)",
+        "fr": "Entretien par un professionnel (PAC / clim 4 à 70 kW)"
+      },
+      "icon": "mdi:account-hard-hat",
+      "unit": "years",
+      "value": 2,
+      "regulatory": true
+    },
+    "hvac_leak_check": {
+      "name": {
+        "en": "Refrigerant leak check",
+        "fr": "Contrôle d'étanchéité du fluide frigorigène"
+      },
+      "icon": "mdi:gauge",
+      "unit": "years",
+      "value": 1,
+      "regulatory": true
+    },
+    "boiler_service": {
+      "name": {
+        "en": "Annual boiler service",
+        "fr": "Entretien annuel de la chaudière"
+      },
+      "icon": "mdi:water-boiler",
+      "unit": "years",
+      "value": 1,
+      "anchor": "09-01",
+      "regulatory": true
+    },
+    "chimney_sweep": {
+      "name": {
+        "en": "Chimney sweeping",
+        "fr": "Ramonage du conduit"
+      },
+      "icon": "mdi:home-roof",
+      "unit": "months",
+      "value": 6,
+      "regulatory": true
+    },
+    "radiators_bleed": {
+      "name": {
+        "en": "Bleed radiators",
+        "fr": "Purger les radiateurs"
+      },
+      "icon": "mdi:radiator",
+      "unit": "years",
+      "value": 1,
+      "anchor": "10-01"
+    },
+    "heating_pressure_check": {
+      "name": {
+        "en": "Check heating circuit pressure",
+        "fr": "Vérifier la pression du circuit"
+      },
+      "icon": "mdi:gauge",
+      "unit": "months",
+      "value": 1
+    },
+    "heating_sludge_filter_clean": {
+      "name": {
+        "en": "Clean sludge / magnetic filter",
+        "fr": "Nettoyer le pot à boues (filtre magnétique)"
+      },
+      "icon": "mdi:magnet",
+      "unit": "years",
+      "value": 1,
+      "anchor": "09-01"
+    },
+    "expansion_vessel_check": {
+      "name": {
+        "en": "Check expansion vessel",
+        "fr": "Contrôler le vase d'expansion"
+      },
+      "icon": "mdi:gauge-low",
+      "unit": "years",
+      "value": 1
+    },
+    "heating_power_flush": {
+      "name": {
+        "en": "Power flush the heating circuit",
+        "fr": "Désembouage du circuit"
+      },
+      "icon": "mdi:water-sync",
+      "unit": "years",
+      "value": 5
+    },
+    "hp_outdoor_clean": {
+      "name": {
+        "en": "Heat pump: clean the outdoor unit",
+        "fr": "PAC : nettoyer l'unité extérieure"
+      },
+      "icon": "mdi:heat-pump-outline",
+      "unit": "months",
+      "value": 6
+    },
+    "hp_circuit_filter_clean": {
+      "name": {
+        "en": "Heat pump: clean the water circuit filter",
+        "fr": "PAC : nettoyer le filtre du circuit"
+      },
+      "icon": "mdi:filter",
+      "unit": "years",
+      "value": 1
+    },
+    "pellet_stove_clean": {
+      "name": {
+        "en": "Pellet stove: empty ash pan, clean burn pot",
+        "fr": "Poêle à granulés : vider le cendrier, nettoyer le creuset"
+      },
+      "icon": "mdi:fireplace",
+      "unit": "weeks",
+      "value": 1
+    },
+    "thermostat_batteries": {
+      "name": {
+        "en": "Replace thermostat and radiator valve batteries",
+        "fr": "Remplacer les piles des thermostats et des têtes connectées"
+      },
+      "icon": "mdi:battery-sync",
+      "unit": "years",
+      "value": 1,
+      "anchor": "09-01"
+    },
+    "smoke_detector_test": {
+      "name": {
+        "en": "Test smoke detectors",
+        "fr": "Tester les détecteurs de fumée"
+      },
+      "icon": "mdi:smoke-detector",
+      "unit": "months",
+      "value": 1,
+      "regulatory": true
+    },
+    "smoke_detector_battery": {
+      "name": {
+        "en": "Replace smoke detector batteries",
+        "fr": "Remplacer les piles des détecteurs de fumée"
+      },
+      "icon": "mdi:battery-alert",
+      "unit": "years",
+      "value": 1
+    },
+    "smoke_detector_replace": {
+      "name": {
+        "en": "Replace smoke detector",
+        "fr": "Remplacer le détecteur de fumée"
+      },
+      "icon": "mdi:smoke-detector-variant",
+      "unit": "years",
+      "value": 10
+    },
+    "co_detector_test": {
+      "name": {
+        "en": "Test CO detector",
+        "fr": "Tester le détecteur de CO"
+      },
+      "icon": "mdi:molecule-co",
+      "unit": "months",
+      "value": 1
+    },
+    "rcd_test": {
+      "name": {
+        "en": "Test residual-current device",
+        "fr": "Tester le disjoncteur différentiel"
+      },
+      "icon": "mdi:flash-alert",
+      "unit": "months",
+      "value": 6
+    },
+    "vmc_vents_clean": {
+      "name": {
+        "en": "Ventilation: clean the vents",
+        "fr": "VMC : nettoyer les bouches"
+      },
+      "icon": "mdi:fan",
+      "unit": "months",
+      "value": 3
+    },
+    "vmc_filters_replace": {
+      "name": {
+        "en": "Dual-flow ventilation: replace filters",
+        "fr": "VMC double flux : remplacer les filtres"
+      },
+      "icon": "mdi:air-filter",
+      "unit": "months",
+      "value": 6
+    },
+    "water_heater_safety_valve": {
+      "name": {
+        "en": "Water heater: operate the safety group",
+        "fr": "Ballon d'eau chaude : manœuvrer le groupe de sécurité"
+      },
+      "icon": "mdi:water-boiler",
+      "unit": "months",
+      "value": 1
+    },
+    "water_heater_descale": {
+      "name": {
+        "en": "Water heater: descale and check anode",
+        "fr": "Ballon d'eau chaude : détartrage et anode"
+      },
+      "icon": "mdi:water-boiler-alert",
+      "unit": "years",
+      "value": 2
+    },
+    "softener_salt": {
+      "name": {
+        "en": "Water softener: refill salt",
+        "fr": "Adoucisseur : ajouter du sel"
+      },
+      "icon": "mdi:shaker-outline",
+      "unit": "months",
+      "value": 1
+    },
+    "softener_resin_disinfect": {
+      "name": {
+        "en": "Water softener: disinfect resin",
+        "fr": "Adoucisseur : désinfecter la résine"
+      },
+      "icon": "mdi:spray-bottle",
+      "unit": "years",
+      "value": 1
+    },
+    "water_filter_cartridge": {
+      "name": {
+        "en": "Replace water inlet filter cartridge",
+        "fr": "Remplacer la cartouche du filtre d'arrivée d'eau"
+      },
+      "icon": "mdi:water-opacity",
+      "unit": "months",
+      "value": 6
+    },
+    "gutters_clean": {
+      "name": {
+        "en": "Clean gutters",
+        "fr": "Nettoyer les gouttières"
+      },
+      "icon": "mdi:home-roof",
+      "unit": "years",
+      "value": 1,
+      "anchor": "11-15"
+    },
+    "hood_grease_filter": {
+      "name": {
+        "en": "Range hood: clean grease filter",
+        "fr": "Hotte : nettoyer le filtre à graisse"
+      },
+      "icon": "mdi:stove",
+      "unit": "months",
+      "value": 1
+    },
+    "hood_carbon_filter": {
+      "name": {
+        "en": "Range hood: replace carbon filter",
+        "fr": "Hotte : remplacer le filtre charbon"
+      },
+      "icon": "mdi:grain",
+      "unit": "months",
+      "value": 6
+    },
+    "dishwasher_filter": {
+      "name": {
+        "en": "Dishwasher: clean the filter",
+        "fr": "Lave-vaisselle : nettoyer le filtre"
+      },
+      "icon": "mdi:dishwasher",
+      "unit": "months",
+      "value": 1
+    },
+    "washer_maintenance": {
+      "name": {
+        "en": "Washing machine: clean drain filter, run a maintenance cycle",
+        "fr": "Lave-linge : nettoyer le filtre de vidange, cycle d'entretien"
+      },
+      "icon": "mdi:washing-machine",
+      "unit": "months",
+      "value": 3
+    },
+    "dryer_condenser": {
+      "name": {
+        "en": "Dryer: clean the condenser",
+        "fr": "Sèche-linge : nettoyer le condenseur"
+      },
+      "icon": "mdi:tumble-dryer",
+      "unit": "months",
+      "value": 1
+    },
+    "fridge_defrost": {
+      "name": {
+        "en": "Fridge: defrost and clean rear grille",
+        "fr": "Réfrigérateur : dégivrer et nettoyer la grille arrière"
+      },
+      "icon": "mdi:fridge-outline",
+      "unit": "years",
+      "value": 1
+    },
+    "fridge_water_filter": {
+      "name": {
+        "en": "Fridge: replace water filter",
+        "fr": "Réfrigérateur : remplacer le filtre à eau"
+      },
+      "icon": "mdi:fridge",
+      "unit": "months",
+      "value": 6
+    },
+    "irrigation_prefilter": {
+      "name": {
+        "en": "Irrigation: clean the pre-filter",
+        "fr": "Arrosage : nettoyer le pré-filtre"
+      },
+      "icon": "mdi:sprinkler",
+      "unit": "months",
+      "value": 1
+    },
+    "irrigation_winterize": {
+      "name": {
+        "en": "Irrigation: purge before frost",
+        "fr": "Arrosage : purger avant le gel"
+      },
+      "icon": "mdi:snowflake",
+      "unit": "years",
+      "value": 1,
+      "anchor": "11-01"
+    },
+    "irrigation_restart": {
+      "name": {
+        "en": "Irrigation: restart",
+        "fr": "Arrosage : remise en service"
+      },
+      "icon": "mdi:sprinkler-variant",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "irrigation_controller_batteries": {
+      "name": {
+        "en": "Irrigation: replace controller batteries",
+        "fr": "Arrosage : remplacer les piles du programmateur"
+      },
+      "icon": "mdi:battery",
+      "unit": "years",
+      "value": 1,
+      "anchor": "04-01"
+    },
+    "mower_blades": {
+      "name": {
+        "en": "Robot mower: replace blades",
+        "fr": "Tondeuse robot : changer les lames"
+      },
+      "icon": "mdi:robot-mower",
+      "unit": "months",
+      "value": 2
+    },
+    "mower_winterize": {
+      "name": {
+        "en": "Robot mower: winterize",
+        "fr": "Tondeuse robot : hivernage"
+      },
+      "icon": "mdi:robot-mower-outline",
+      "unit": "years",
+      "value": 1,
+      "anchor": "11-15"
+    }
+  },
+  "templates": {
+    "pool_filtration": {
+      "name": {
+        "en": "Pool pump and filtration",
+        "fr": "Piscine : pompe et filtration"
+      },
+      "category": "pool",
+      "icon": "mdi:pool",
+      "tasks": [
+        "pool_prefilter_clean",
+        "pool_skimmer_baskets",
+        "pool_backwash",
+        "pool_sand_replace",
+        "pool_prefilter_seal_check",
+        "pool_waterline_clean",
+        "pool_winterize",
+        "pool_reopen"
+      ]
+    },
+    "pool_cartridge_filtration": {
+      "name": {
+        "en": "Pool with cartridge filter",
+        "fr": "Piscine : filtre à cartouche"
+      },
+      "category": "pool",
+      "icon": "mdi:pool",
+      "tasks": [
+        "pool_prefilter_clean",
+        "pool_skimmer_baskets",
+        "pool_cartridge_clean",
+        "pool_prefilter_seal_check",
+        "pool_waterline_clean",
+        "pool_winterize",
+        "pool_reopen"
+      ]
+    },
+    "pool_treatment": {
+      "name": {
+        "en": "Pool water treatment",
+        "fr": "Piscine : traitement de l'eau"
+      },
+      "category": "pool",
+      "icon": "mdi:test-tube",
+      "tasks": [
+        "pool_water_analysis",
+        "pool_ph_calibrate",
+        "pool_ph_clean",
+        "pool_orp_calibrate",
+        "pool_orp_clean",
+        "pool_ec_calibrate",
+        "pool_ec_clean",
+        "pool_dosing_strainer_replace",
+        "pool_dosing_tube_replace"
+      ]
+    },
+    "pool_salt_chlorinator": {
+      "name": {
+        "en": "Salt chlorinator",
+        "fr": "Électrolyseur au sel"
+      },
+      "category": "pool",
+      "icon": "mdi:shaker",
+      "tasks": ["pool_salt_cell_descale", "pool_salt_cell_replace"]
+    },
+    "pool_robot": {
+      "name": {
+        "en": "Pool robot",
+        "fr": "Robot de piscine"
+      },
+      "category": "pool",
+      "icon": "mdi:robot-vacuum",
+      "tasks": ["pool_robot_filter_clean", "pool_robot_brushes_check"]
+    },
+    "pool_cover": {
+      "name": {
+        "en": "Pool cover",
+        "fr": "Volet ou bâche de piscine"
+      },
+      "category": "pool",
+      "icon": "mdi:window-shutter",
+      "tasks": ["pool_cover_clean"]
+    },
+    "pool_heat_pump": {
+      "name": {
+        "en": "Pool heat pump",
+        "fr": "Pompe à chaleur de piscine"
+      },
+      "category": "pool",
+      "icon": "mdi:heat-pump",
+      "tasks": [
+        "pool_hp_evaporator_clean",
+        "pool_hp_condensate_check",
+        "pool_hp_flow_check",
+        "pool_hp_fittings_check",
+        "pool_hp_drain",
+        "pool_hp_cover",
+        "pool_hp_pro_check"
+      ]
+    },
+    "air_conditioner": {
+      "name": {
+        "en": "Air conditioner / air-to-air heat pump",
+        "fr": "Climatisation / PAC air-air"
+      },
+      "category": "hvac",
+      "icon": "mdi:air-conditioner",
+      "tasks": [
+        "ac_filters_clean",
+        "ac_exchanger_clean",
+        "ac_outdoor_clean",
+        "ac_condensate_check",
+        "ac_remote_batteries",
+        "hvac_pro_service",
+        "hvac_leak_check"
+      ]
+    },
+    "heat_pump_air_water": {
+      "name": {
+        "en": "Air-to-water heat pump",
+        "fr": "PAC air-eau"
+      },
+      "category": "heating",
+      "icon": "mdi:heat-pump-outline",
+      "tasks": [
+        "hp_outdoor_clean",
+        "hp_circuit_filter_clean",
+        "heating_pressure_check",
+        "hvac_pro_service",
+        "hvac_leak_check"
+      ]
+    },
+    "gas_boiler": {
+      "name": {
+        "en": "Boiler (gas, oil)",
+        "fr": "Chaudière (gaz, fioul)"
+      },
+      "category": "heating",
+      "icon": "mdi:water-boiler",
+      "tasks": [
+        "boiler_service",
+        "chimney_sweep",
+        "heating_pressure_check",
+        "expansion_vessel_check"
+      ]
+    },
+    "central_heating": {
+      "name": {
+        "en": "Central heating circuit",
+        "fr": "Circuit de chauffage central"
+      },
+      "category": "heating",
+      "icon": "mdi:radiator",
+      "tasks": [
+        "radiators_bleed",
+        "heating_pressure_check",
+        "heating_sludge_filter_clean",
+        "expansion_vessel_check",
+        "heating_power_flush",
+        "thermostat_batteries"
+      ]
+    },
+    "pellet_stove": {
+      "name": {
+        "en": "Pellet / wood stove",
+        "fr": "Poêle à granulés / bois"
+      },
+      "category": "heating",
+      "icon": "mdi:fireplace",
+      "tasks": [
+        "pellet_stove_clean",
+        "chimney_sweep",
+        {
+          "key": "boiler_service",
+          "anchor": "09-15"
+        }
+      ]
+    },
+    "smoke_detectors": {
+      "name": {
+        "en": "Smoke detectors",
+        "fr": "Détecteurs de fumée"
+      },
+      "category": "home",
+      "icon": "mdi:smoke-detector",
+      "tasks": [
+        "smoke_detector_test",
+        "smoke_detector_battery",
+        "smoke_detector_replace"
+      ]
+    },
+    "co_detector": {
+      "name": {
+        "en": "CO detector",
+        "fr": "Détecteur de CO"
+      },
+      "category": "home",
+      "icon": "mdi:molecule-co",
+      "tasks": ["co_detector_test"]
+    },
+    "electrical_panel": {
+      "name": {
+        "en": "Electrical panel",
+        "fr": "Tableau électrique"
+      },
+      "category": "home",
+      "icon": "mdi:flash",
+      "tasks": ["rcd_test"]
+    },
+    "ventilation": {
+      "name": {
+        "en": "Ventilation (single flow)",
+        "fr": "VMC simple flux"
+      },
+      "category": "home",
+      "icon": "mdi:fan",
+      "tasks": ["vmc_vents_clean"]
+    },
+    "ventilation_dual_flow": {
+      "name": {
+        "en": "Ventilation (dual flow)",
+        "fr": "VMC double flux"
+      },
+      "category": "home",
+      "icon": "mdi:fan",
+      "tasks": ["vmc_vents_clean", "vmc_filters_replace"]
+    },
+    "water_heater": {
+      "name": {
+        "en": "Water heater",
+        "fr": "Ballon d'eau chaude"
+      },
+      "category": "home",
+      "icon": "mdi:water-boiler",
+      "tasks": ["water_heater_safety_valve", "water_heater_descale"]
+    },
+    "water_softener": {
+      "name": {
+        "en": "Water softener",
+        "fr": "Adoucisseur"
+      },
+      "category": "home",
+      "icon": "mdi:water-check",
+      "tasks": ["softener_salt", "softener_resin_disinfect"]
+    },
+    "water_inlet_filter": {
+      "name": {
+        "en": "Water inlet filter",
+        "fr": "Filtre d'arrivée d'eau"
+      },
+      "category": "home",
+      "icon": "mdi:water-opacity",
+      "tasks": ["water_filter_cartridge"]
+    },
+    "house_exterior": {
+      "name": {
+        "en": "House exterior",
+        "fr": "Extérieur de la maison"
+      },
+      "category": "home",
+      "icon": "mdi:home",
+      "tasks": ["gutters_clean"]
+    },
+    "range_hood": {
+      "name": {
+        "en": "Range hood",
+        "fr": "Hotte"
+      },
+      "category": "appliance",
+      "icon": "mdi:stove",
+      "tasks": ["hood_grease_filter", "hood_carbon_filter"]
+    },
+    "dishwasher": {
+      "name": {
+        "en": "Dishwasher",
+        "fr": "Lave-vaisselle"
+      },
+      "category": "appliance",
+      "icon": "mdi:dishwasher",
+      "tasks": ["dishwasher_filter"]
+    },
+    "washing_machine": {
+      "name": {
+        "en": "Washing machine",
+        "fr": "Lave-linge"
+      },
+      "category": "appliance",
+      "icon": "mdi:washing-machine",
+      "tasks": ["washer_maintenance"]
+    },
+    "dryer": {
+      "name": {
+        "en": "Dryer",
+        "fr": "Sèche-linge"
+      },
+      "category": "appliance",
+      "icon": "mdi:tumble-dryer",
+      "tasks": ["dryer_condenser"]
+    },
+    "fridge": {
+      "name": {
+        "en": "Fridge",
+        "fr": "Réfrigérateur"
+      },
+      "category": "appliance",
+      "icon": "mdi:fridge",
+      "tasks": ["fridge_defrost", "fridge_water_filter"]
+    },
+    "irrigation": {
+      "name": {
+        "en": "Irrigation",
+        "fr": "Arrosage"
+      },
+      "category": "garden",
+      "icon": "mdi:sprinkler",
+      "tasks": [
+        "irrigation_prefilter",
+        "irrigation_winterize",
+        "irrigation_restart",
+        "irrigation_controller_batteries"
+      ]
+    },
+    "robot_mower": {
+      "name": {
+        "en": "Robot mower",
+        "fr": "Tondeuse robot"
+      },
+      "category": "garden",
+      "icon": "mdi:robot-mower",
+      "tasks": ["mower_blades", "mower_winterize"]
+    }
+  }
+}

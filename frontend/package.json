@@ -1,0 +1,25 @@
+{
+  "name": "maintenance-hub-card",
+  "version": "0.1.0",
+  "description": "Lovelace card of the Maintenance Hub integration, served by the integration itself",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --no-cache"
+  },
+  "dependencies": {
+    "ha-maintenance-ui": "github:Elwinmage/ha-maintenance-ui#v0.1.0",
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "5.0.3",
+    "jsdom": "^30.1.2",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "5.0.3"
+  }
+}

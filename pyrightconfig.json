@@ -1,0 +1,15 @@
+{
+  "include": ["custom_components", "tests"],
+  "exclude": ["**/__pycache__", "**/.venv"],
+  "extraPaths": ["."],
+  "executionEnvironments": [
+    {
+      "root": "custom_components"
+    },
+    {
+      "root": "tests",
+      "reportTypedDictNotRequiredAccess": "none"
+    }
+  ],
+  "reportPrivateImportUsage": false
+}

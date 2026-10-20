@@ -1,0 +1,26 @@
+# Coverage.py configuration for the reef_maintenance integration.
+#
+# Single source of truth: no competing [coverage:*] section in setup.cfg, so
+# the numbers do not depend on how pytest was invoked.
+
+[run]
+source = custom_components/maintenance_hub
+branch = False
+
+[report]
+# `exclude_also` ADDS to the built-in defaults ("pragma: no cover", "raise
+# NotImplementedError"...). The older `exclude_lines` would REPLACE them.
+#
+# CAREFUL: a pattern here excludes the *block the matched line opens*, not the
+# line alone. Never add a pattern matching a closing parenthesis: it belongs to
+# the `def` statement, so it would exclude every function with a multi-line
+# signature and silently inflate the reported coverage.
+exclude_also =
+    if __name__ == .__main__.:
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if TYPE_CHECKING:
+
+show_missing = True
+skip_covered = False

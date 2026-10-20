@@ -1,0 +1,126 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nouvel emplacement",
+        "description": "Un emplacement regroupe des appareils et leurs tâches d'entretien : maison principale, maison de vacances, piscine…",
+        "data": { "name": "Nom de l'emplacement" }
+      }
+    },
+    "error": { "empty_name": "Le nom ne peut pas être vide." },
+    "abort": { "already_configured": "Cet emplacement existe déjà." }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Appareils de l'emplacement",
+        "menu_options": {
+          "add": "Ajouter un appareil",
+          "edit": "Modifier un appareil",
+          "remove": "Supprimer un appareil"
+        }
+      },
+      "add": {
+        "title": "Ajouter un appareil",
+        "description": "Choisissez un appareil Home Assistant existant, ou saisissez le nom d'un appareil que Home Assistant ne connaît pas. Un modèle présélectionne les tâches habituelles.",
+        "data": {
+          "ha_device_id": "Appareil Home Assistant",
+          "name": "Nom",
+          "template": "Modèle"
+        }
+      },
+      "tasks": {
+        "title": "Tâches de {device}",
+        "description": "Cochez des tâches du catalogue et/ou saisissez les vôtres, une par champ : `Libellé` (tous les mois) ou `Libellé ; 2 ; semaines`. Les fréquences se règlent ensuite depuis la carte.",
+        "data": {
+          "tasks": "Tâches du catalogue",
+          "custom_tasks": "Tâches personnalisées"
+        }
+      },
+      "edit": {
+        "title": "Modifier un appareil",
+        "data": { "device": "Appareil" }
+      },
+      "edit_device": {
+        "title": "Modifier un appareil",
+        "data": { "name": "Nom" }
+      },
+      "remove": {
+        "title": "Supprimer un appareil",
+        "description": "Les tâches de l'appareil et leur historique sont supprimés.",
+        "data": { "device": "Appareil" }
+      }
+    },
+    "error": {
+      "device_or_name": "Choisissez un appareil ou saisissez un nom.",
+      "empty_name": "Le nom ne peut pas être vide.",
+      "invalid_custom_task": "Tâche personnalisée invalide. Utilisez `Libellé` ou `Libellé ; valeur ; unité` (jours, semaines, mois, ans).",
+      "no_task": "Sélectionnez ou saisissez au moins une tâche."
+    }
+  },
+  "exceptions": {
+    "not_a_task": {
+      "message": "{entity_id} n'est pas une tâche Maintenance Hub."
+    },
+    "invalid_frequency": { "message": "Fréquence invalide : {error}" }
+  },
+  "selector": {
+    "unit": {
+      "options": {
+        "days": "Jours",
+        "weeks": "Semaines",
+        "months": "Mois",
+        "years": "Années"
+      }
+    }
+  },
+  "services": {
+    "reset": {
+      "name": "Enregistrer un entretien",
+      "description": "Marque des tâches d'entretien comme faites. Pratique depuis un tag NFC collé à côté de l'équipement.",
+      "fields": {
+        "entity_id": {
+          "name": "Tâches",
+          "description": "Capteurs des tâches d'entretien."
+        },
+        "last_reset": {
+          "name": "Date et heure",
+          "description": "Quand l'entretien a réellement été fait. Maintenant par défaut."
+        }
+      }
+    },
+    "set_frequency": {
+      "name": "Régler la fréquence",
+      "description": "Change la fréquence de retour des tâches d'entretien.",
+      "fields": {
+        "entity_id": {
+          "name": "Tâches",
+          "description": "Capteurs des tâches d'entretien."
+        },
+        "unit": { "name": "Unité", "description": "Unité de la fréquence." },
+        "value": {
+          "name": "Valeur",
+          "description": "Nombre d'unités entre deux entretiens."
+        },
+        "anchor": {
+          "name": "Date saisonnière",
+          "description": "Date MM-JJ à laquelle la tâche revient chaque saison (unité années uniquement). Vide pour une tâche glissante."
+        }
+      }
+    },
+    "set_notify": {
+      "name": "Régler les alertes",
+      "description": "Active ou coupe les alertes des tâches d'entretien.",
+      "fields": {
+        "entity_id": {
+          "name": "Tâches",
+          "description": "Capteurs des tâches d'entretien."
+        },
+        "notify": {
+          "name": "Alertes",
+          "description": "Activé pour être alerté quand la tâche est due."
+        }
+      }
+    }
+  }
+}

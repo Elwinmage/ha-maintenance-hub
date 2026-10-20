@@ -1,9 +1,14 @@
 {
   "domain": "maintenance_hub",
   "name": "Maintenance Hub",
-  "codeowners": ["@Elwinmage"],
+  "codeowners": [
+    "@Elwinmage"
+  ],
   "config_flow": true,
-  "dependencies": ["frontend", "http"],
+  "dependencies": [
+    "frontend",
+    "http"
+  ],
   "documentation": "https://github.com/Elwinmage/ha-maintenance-hub",
   "integration_type": "hub",
   "iot_class": "calculated",

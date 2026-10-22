@@ -3,17 +3,8 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-<<<<<<< HEAD
-
-# The default GITHUB_TOKEN of a new repository is read-only: the job
-# commits and pushes, so it needs write access to the contents.
 permissions:
   contents: write
-
-=======
-permissions:
-  contents: write
->>>>>>> 51443407df977cabd8644202ca005d5a5392b645
 jobs:
   update-badge:
     runs-on: ubuntu-latest

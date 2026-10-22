@@ -50,6 +50,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: "pip"
+          # No requirements.txt at the root (the integration has no
+          # runtime requirement): key the pip cache on the test requirements.
+          cache-dependency-path: requirements.test.txt
 
 
       - name: Install dependencies

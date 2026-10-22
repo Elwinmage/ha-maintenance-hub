@@ -5,6 +5,11 @@ on:
     - cron: "0 */24 * * *"
   workflow_dispatch:
 
+# The default GITHUB_TOKEN of a new repository is read-only: the job
+# commits and pushes, so it needs write access to the contents.
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -923,7 +923,7 @@ var e=globalThis,t=e.ShadowRoot&&(e.ShadyCSS===void 0||e.ShadyCSS.nativeShadow)&
         </div>
         ${this._render_toolbar(t,n)} ${this._render_list(a,e)}
       </div>
-    `}};function ct(e=`maintenance-view`){return customElements.get(e)||customElements.define(e,class extends st{}),e}function lt(e){return{sort:e.sort,locations:e.locations,devices:e.devices,hide_ok:e.hide_ok,hide_muted:e.hide_muted,warning_ratio:e.warning_ratio,show_reset:e.show_reset,show_notify:e.show_notify,show_interval:e.show_interval,title:e.title,default_location:e.reef_location}}function ut(e){return e.include_reef===!1?[rt]:[rt,$e]}var Z=`maintenance-hub-card`,dt=`maintenance-hub-card-editor`,ft=`v0.1.0`,Q={hide_ok:!1,hide_muted:!1,show_reset:!0,show_notify:!0,show_interval:!0,include_reef:!0},pt=class extends U{static properties={hass:{attribute:!1},_config:{state:!0}};static styles=[it,o`
+    `}};function ct(e=`maintenance-view`){return customElements.get(e)||customElements.define(e,class extends st{}),e}function lt(e){return{sort:e.sort,locations:e.locations,devices:e.devices,hide_ok:e.hide_ok,hide_muted:e.hide_muted,warning_ratio:e.warning_ratio,show_reset:e.show_reset,show_notify:e.show_notify,show_interval:e.show_interval,title:e.title,default_location:e.reef_location}}function ut(e){return e.include_reef===!1?[rt]:[rt,$e]}var Z=`maintenance-hub-card`,dt=`maintenance-hub-card-editor`,ft=`v0.1.1`,Q={hide_ok:!1,hide_muted:!1,show_reset:!0,show_notify:!0,show_interval:!0,include_reef:!0},pt=class extends U{static properties={hass:{attribute:!1},_config:{state:!0}};static styles=[it,o`
       .maint-editor-form table {
         width: 100%;
       }

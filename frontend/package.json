@@ -1,6 +1,6 @@
 {
   "name": "maintenance-hub-card",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lovelace card of the Maintenance Hub integration, served by the integration itself",
   "type": "module",
   "private": true,

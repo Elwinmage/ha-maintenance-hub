@@ -13,12 +13,13 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # gh reads GH_TOKEN directly. Unlike `gh auth login --with-token`, it does
+    # not require the read:org scope, which this job never uses.
+    env:
+      GH_TOKEN: ${{ secrets.SECRET_TOKEN }}
 
     steps:
       - uses: actions/checkout@v7
-
-      - name: gh login
-        run: echo "${{ secrets.SECRET_TOKEN }}" | gh auth login --with-token
 
       - name: parse latest clone count
         run: |

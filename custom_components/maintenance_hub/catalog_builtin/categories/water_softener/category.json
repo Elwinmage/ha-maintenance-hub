@@ -1,0 +1,16 @@
+{
+  "name": {
+    "en": "Water softener",
+    "fr": "Adoucisseur"
+  },
+  "scopes": ["home"],
+  "icon": "mdi:water-outline",
+  "maintenance": [
+    {
+      "task": "softener_salt_refill"
+    },
+    {
+      "task": "softener_service"
+    }
+  ]
+}

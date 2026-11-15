@@ -1,0 +1,13 @@
+{
+  "name": {
+    "en": "Cooling fan",
+    "fr": "Ventilateur"
+  },
+  "scopes": ["aquarium"],
+  "icon": "mdi:fan",
+  "maintenance": [
+    {
+      "task": "fan_clean"
+    }
+  ]
+}

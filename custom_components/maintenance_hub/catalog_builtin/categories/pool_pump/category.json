@@ -1,0 +1,13 @@
+{
+  "name": {
+    "en": "Pool pump",
+    "fr": "Pompe de filtration"
+  },
+  "scopes": ["pool"],
+  "icon": "mdi:pump",
+  "maintenance": [
+    {
+      "task": "pool_prefilter_clean"
+    }
+  ]
+}

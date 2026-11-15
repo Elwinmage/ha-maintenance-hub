@@ -1,0 +1,13 @@
+{
+  "name": {
+    "en": "Chiller",
+    "fr": "Groupe froid"
+  },
+  "scopes": ["aquarium"],
+  "icon": "mdi:snowflake",
+  "maintenance": [
+    {
+      "task": "chiller_condenser_clean"
+    }
+  ]
+}
